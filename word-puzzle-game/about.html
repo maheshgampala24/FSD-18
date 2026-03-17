@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Word Scramble Pro - About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Shapes -->
+    <div class="bg-shapes">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+        <div class="bg-shape bg-shape-3"></div>
+    </div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🧩</div>
+                <span class="logo-text">CSE Word Scramble Pro</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="play.html">Play</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="glass-card about-card">
+                <h2>📖 About CSE Word Scramble Pro</h2>
+                
+                <h3>🎯 Purpose of the Game</h3>
+                <p>
+                    CSE Word Scramble Pro is an educational puzzle game designed specifically for 
+                    Computer Science Engineering students and enthusiasts. The game helps players 
+                    master technical vocabulary across various CS domains through an engaging 
+                    word unscrambling format.
+                </p>
+                <p>
+                    Whether you're preparing for exams, interviews, or just want to expand your 
+                    technical knowledge, this game provides a fun and interactive way to learn 
+                    and reinforce important CS concepts.
+                </p>
+
+                <h3>🖥️ Technologies Used</h3>
+                <p>This game is built using pure web technologies:</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">Vanilla JavaScript (ES6+)</span>
+                    <span class="tech-tag">LocalStorage API</span>
+                    <span class="tech-tag">Google Fonts</span>
+                </div>
+
+                <h3>📚 Categories Covered</h3>
+                <p>The game includes comprehensive coverage of major Computer Science domains:</p>
+                <ul>
+                    <li><strong>Programming</strong> - Programming languages, paradigms, and concepts</li>
+                    <li><strong>Data Structures</strong> - Arrays, trees, graphs, linked lists, and more</li>
+                    <li><strong>Database</strong> - DBMS concepts, SQL, and data modeling</li>
+                    <li><strong>Operating Systems</strong> - Process management, memory, and scheduling</li>
+                    <li><strong>Networking</strong> - Protocols, topologies, and network concepts</li>
+                    <li><strong>Software Engineering</strong> - Development methodologies and practices</li>
+                    <li><strong>Computer Fundamentals</strong> - Basic hardware and software concepts</li>
+                </ul>
+
+                <h3>📊 Understanding Performance Metrics</h3>
+                <p>The game calculates several advanced performance metrics to help you track your progress:</p>
+                
+                <div class="metrics-explanation">
+                    <div class="metric-item">
+                        <h4>🎯 Accuracy Percentage</h4>
+                        <p>The percentage of correctly answered questions out of total questions attempted.</p>
+                        <span class="formula">Accuracy = (Correct Answers / Total Questions) × 100</span>
+                    </div>
+
+                    <div class="metric-item">
+                        <h4>⚡ PPM (Pieces Per Minute) - Speed-Accuracy Rate</h4>
+                        <p>Measures how quickly you can solve puzzles while maintaining accuracy. Higher PPM indicates better performance.</p>
+                        <span class="formula">PPM = Correct Answers / Total Time (in minutes)</span>
+                    </div>
+
+                    <div class="metric-item">
+                        <h4>⏱️ Time Penalty Method</h4>
+                        <p>Adjusted time calculation that penalizes wrong answers. This helps measure true efficiency.</p>
+                        <span class="formula">Penalty Time = Total Time + (Wrong Answers × 10 seconds)</span>
+                    </div>
+
+                    <div class="metric-item">
+                        <h4>📈 Success Rate / Efficiency</h4>
+                        <p>The ratio of correct answers to total attempts, showing how often you get questions right.</p>
+                        <span class="formula">Success Rate = (Correct Answers / Total Attempts) × 100</span>
+                    </div>
+                </div>
+
+                <h3>🎮 How to Play</h3>
+                <ul>
+                    <li>Select a <strong>category</strong> from the 7 available CS domains</li>
+                    <li>Choose a <strong>difficulty level</strong> (Easy, Medium, Hard)</li>
+                    <li>Read the <strong>question</strong> carefully</li>
+                    <li>Unscramble the <strong>jumbled word</strong></li>
+                    <li>Use <strong>hints</strong> if needed (but they'll affect your score!)</li>
+                    <li>Answer <strong>10 questions</strong> to complete the game</li>
+                    <li>Wrong answer or timeout ends the game immediately</li>
+                </ul>
+
+                <h3>🏆 Scoring System</h3>
+                <p>
+                    Your performance is tracked using localStorage. The leaderboard stores your best 
+                    scores, accuracy, and PPM ratings. Challenge yourself to reach the top of the 
+                    leaderboard!
+                </p>
+
+                <h3>💡 Tips for Success</h3>
+                <ul>
+                    <li>Start with <strong>Easy</strong> mode to build confidence</li>
+                    <li>Use hints <strong>sparingly</strong> - they're there to help, not rely on</li>
+                    <li>Practice all <strong>categories</strong> to become a well-rounded CS professional</li>
+                    <li>Focus on <strong>speed AND accuracy</strong> - both affect your PPM score</li>
+                    <li>Learn from <strong>mistakes</strong> - wrong answers show you the correct term</li>
+                </ul>
+
+                <p style="margin-top: 30px; text-align: center; color: var(--light-purple);">
+                    Good luck and happy learning! 🚀
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2026 Pragati Students
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

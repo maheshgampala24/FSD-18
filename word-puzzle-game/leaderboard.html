@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Word Scramble Pro - Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Shapes -->
+    <div class="bg-shapes">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+        <div class="bg-shape bg-shape-3"></div>
+    </div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🧩</div>
+                <span class="logo-text">CSE Word Scramble Pro</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="play.html">Play</a></li>
+                <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Leaderboard Section -->
+        <section class="leaderboard-section">
+            <div class="page-header">
+                <h1>🏆 Leaderboard</h1>
+                <p>Top performers in CSE Word Scramble</p>
+            </div>
+
+            <div class="glass-card leaderboard-card">
+                <div class="leaderboard-header">
+                    <h2>Top 5 Players</h2>
+                    <button id="resetLeaderboardBtn" class="reset-button">Reset</button>
+                </div>
+
+                <!-- Empty State -->
+                <div id="leaderboardEmpty" class="empty-state" style="display: none;">
+                    <div class="empty-state-icon">📝</div>
+                    <p>No scores yet. Play a game to get on the leaderboard!</p>
+                </div>
+
+                <!-- Leaderboard Table -->
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Category</th>
+                            <th>Level</th>
+                            <th>Score</th>
+                            <th>Points</th>
+                            <th>Accuracy</th>
+                            <th>PPM</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardBody">
+                        <!-- Leaderboard entries will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2026 Pragati Students
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load leaderboard when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadLeaderboard();
+        });
+    </script>
+</body>
+</html>
