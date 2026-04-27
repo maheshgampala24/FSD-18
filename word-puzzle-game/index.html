@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Word Scramble Pro - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Shapes -->
+    <div class="bg-shapes">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+        <div class="bg-shape bg-shape-3"></div>
+    </div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🧩</div>
+                <span class="logo-text">CSE Word Scramble Pro</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="play.html">Play</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Home Section -->
+        <section class="home-section">
+            <div class="glass-card home-card">
+                <div class="home-logo">
+                    <div class="game-icon-large">🧩</div>
+                    <h1 class="home-title">CSE Word Scramble Pro</h1>
+                    <p class="home-subtitle">
+                        Challenge your Computer Science knowledge with this engaging word puzzle game. 
+                        Unscramble technical terms, improve your vocabulary, and become a CS master!
+                    </p>
+                </div>
+
+                <!-- Player Name Input -->
+                <div class="form-group">
+                    <label for="playerName">Enter Your Name</label>
+                    <input type="text" id="playerName" class="custom-input" placeholder="Your name..." maxlength="20" autocomplete="off">
+                </div>
+
+                <!-- Start Button -->
+                <div class="selection-section">
+                    <button id="startBtn" class="start-button" disabled>
+                        <span>Start Game</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Best Score -->
+                <div class="best-score-display">
+                    <span class="best-label">Top Score:</span>
+                    <span id="bestScore" class="best-value">--</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2026 Pragati Students
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load best score on home page
+        document.addEventListener('DOMContentLoaded', function() {
+            const bestScore = localStorage.getItem('wordScrambleBestScore');
+            if (bestScore) {
+                document.getElementById('bestScore').textContent = bestScore;
+            }
+            
+            const playerNameInput = document.getElementById('playerName');
+            const startBtn = document.getElementById('startBtn');
+            
+            // Enable start button when name is entered
+            playerNameInput.addEventListener('input', function() {
+                const name = playerNameInput.value.trim();
+                startBtn.disabled = name.length === 0;
+            });
+            
+            // Redirect to play.html when Start button is clicked
+            startBtn.addEventListener('click', function() {
+                const playerName = playerNameInput.value.trim();
+                if (playerName) {
+                    localStorage.setItem('wordScramblePlayerName', playerName);
+                }
+                window.location.href = 'play.html';
+            });
+        });
+    </script>
+</body>
+</html>
